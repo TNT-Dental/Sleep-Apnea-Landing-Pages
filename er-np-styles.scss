@@ -1,0 +1,401 @@
+.progress,sub,sup{vertical-align:baseline}.block,.elem-left,.elem-right,article,aside,details,figcaption,figure,footer,header,hr,main,menu,nav,section,summary{display:block}hr,sub,sup{position:relative}body,figure{margin:0}button,hr,input,select{overflow:visible}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;box-sizing:border-box;font-size:100%}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:0 0 .67em}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:50%;line-height:0}sub{bottom:-.25em}sup{top:-.45em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;border:0}button,input,select,textarea{font:inherit;line-height:initial;margin:0}optgroup{font-weight:700}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{cursor:pointer}[disabled]{cursor:default}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button;-moz-appearance:button;appearance:button;border:0}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}button:-moz-focusring,input:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none;appearance:none}*,::before,::after{box-sizing:border-box;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.clearfix:before,.clearfix:after{display:table;content:" "}.clearfix:after{clear:both}address{font-style:normal!important}img{max-width:100%;display:block;margin:0 auto}.icon-gplus:before{margin-left:-1px!important}*,::before,::after{box-sizing:border-box;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}[class*=" icon-"]:before,[class^=icon-]:before{line-height:1!important;display:block!important}img{max-width:100%}header{z-index:101}footer{z-index:102}.fixons{z-index:103}.flex-ed,.col-flex-ed{display:flex}.flex-ed{flex-flow:row wrap}
+.animated{-webkit-animation-duration:2s;animation-duration:2s;-webkit-animation-fill-mode:both;animation-fill-mode:both}@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.fadeIn{-webkit-animation-name:fadeIn;animation-name:fadeIn}@-webkit-keyframes slideIn{from{transform:translate3d(0,-100%,0)}to{transform:translate3d(0,0,0)}}@keyframes slideIn{from{transform:translate3d(0,-100%,0)}to{transform:translate3d(0,0,0)}}@-webkit-keyframes fadeInUp{from{opacity:0;transform:translate3d(0,100%,0)}to{opacity:1;transform:none}}@keyframes fadeInUp{from{opacity:0;transform:translate3d(0,100%,0)}to{opacity:1;transform:none}}.fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp}@-webkit-keyframes fadeInRight{from{opacity:0;transform:translate3d(100%,0,0)}to{opacity:1;transform:none}}@keyframes fadeInRight{from{opacity:0;transform:translate3d(100%,0,0)}to{opacity:1;transform:none}}.fadeInRight{-webkit-animation-name:fadeInRight;animation-name:fadeInRight}@-webkit-keyframes fadeInLeft{from{opacity:0;transform:translate3d(-100%,0,0)}to{opacity:1;transform:none}}@keyframes fadeInLeft{from{opacity:0;transform:translate3d(-100%,0,0)}to{opacity:1;transform:none}}.fadeInLeft{-webkit-animation-name:fadeInLeft;animation-name:fadeInLeft}
+.star:before{font-size:28px;font-family:'fontello';letter-spacing: 8.4px;font-weight:400;margin:0;font-style:normal;content:'\e80f \e80f \e80f \e80f \e80f';color: #febb21;}
+
+$primary: #f18c20;
+$secondary: #002d52;
+$font: 'DM Sans', sans-serif;
+$font2: 'Manrope', sans-serif;
+$text: #1a1a1a;
+
+
+@media (min-width: 1031px) {
+    #fixed-tabs{display:none}
+}
+@media (max-width: 1030px) {
+    #fixed-tabs{position:fixed;right:0;text-align:center;line-height:1;font-size:0;z-index:10000; bottom:0;width:100%;box-shadow:0 0 15px rgba(0,0,0,0.3); display:flex;
+       a{padding:13px 0;flex:1; font-size:13px;font-weight:700;font-family: $font;background-color: darken($secondary, 10%);color:#fff;text-transform:uppercase; 
+          span{display:inline-block;vertical-align:middle;
+            &:last-child{margin-left:7px} 
+           } 
+           &:nth-of-type(2){background-color:darken($primary, 10%); }
+        }
+       i{font-size:16px; margin-right: 5px;}
+       i, i:before{display:inline-block;margin:0 auto}
+    }
+    footer{margin-bottom:42px!important}
+}
+@media (max-width: 600px) {
+    #fixed-tabs {
+        strong{display:none}
+        a span:last-child{margin-left:0}
+    }
+}
+
+body{position:relative;background-color:#e2f1ee;font-family: $font; text-align:center}
+p{font:400 18px/28px $font; color: $text;}
+a{display:inline-block;text-decoration:none;cursor:pointer}
+h1,h2,h3,h4,h5,h6{font-family: $font;}
+.mobile-banner-reviews{display:none}
+h2{color:$secondary;text-align:center;font-size:50px; font-family: $font;line-height:55px;font-weight: 700; line-height: 1.2;}
+h3{font-size:32px;line-height:1.41}
+
+
+header{position:relative;padding:10px 10px;background-color:#fff;
+    .flex-ed{justify-content:space-between;align-items:center;flex-wrap:nowrap; max-width:1160px;margin:auto;width:100%;}
+    .btn-alt{margin:0; text-transform: uppercase; font-size: 18px; letter-spacing: 1.3px; font-family: $font2; font-weight: 700; padding: 15px 30px; color: white; border-radius: 5px; order: 2;
+        span {letter-spacing: 2.6px; font-size: 26px;}}
+    address{text-align:right;font-weight:400;
+        a{display:block;text-align:right}
+    }
+    .header-addresses {order: -1; flex: 0 1 350px;}
+}
+.address{color:$text;font-size:17px;line-height:1.25;font-weight:400; text-align: center; letter-spacing: 0.42px;
+    &:hover {color: $primary;}}
+.phone{color: $primary;font-size:35px;line-height:1.1;font-weight:700}
+.phone-call { order: -1;
+    span {margin: auto; font-family: $font2; font-size: 16px; letter-spacing: 0.05em; font-weight: 700; text-transform: uppercase;}
+}
+.phone:hover{color:$secondary}
+.fix-nav header{position:fixed;width:100%;left:0;top:0;right:0; animation:slideIn .8s both; box-shadow:1.6px 2.5px 7px rgba(6,7,7,0.35);
+    .logo {position: relative; 
+        img {max-height: 120px;}}
+    address {margin-left: 0;}}
+
+.btn,.btn-alt{cursor:pointer;position:relative;display:inline-block;margin:3px auto;padding:12px 15px;color:#fff;font:900 15px/1 $font; text-transform: uppercase;  transition:border .3s;background-color:$primary;min-width: 220px;
+    &:hover, &:hover{background-color:$secondary;color:#fff;}
+}
+
+
+.split{display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;max-width: 1100px; margin: 60px auto;
+    article{margin:10px;flex:0 1 525px}
+    figure img{position:relative;}
+    &.even figure{order:-1;margin-right:40px}
+}
+
+.top-callout {background-color: #ffd548; font-weight: bold; font-size: 28px; letter-spacing: 0.02em; color: #000; padding: 20px; text-align: center; width: 100%;}
+
+
+#banner{overflow:hidden; display: flex; justify-content: space-between; flex-wrap: nowrap; background: url(assets/images/cpap-lp-banner-background.jpg), #ccc; background-size: contain; background-repeat: no-repeat;
+    figure{margin-top:0;padding-bottom:20px;position:relative; order:1; left: 20%; transform: translateX(-20%);
+        img {display: none;}
+        .btn {position: relative; bottom: -85%; border: 3px solid $primary; border-radius: 5px; background-color: rgba(0, 0, 0, 0); color: #002d52; text-transform: none; font-size: 18px; 
+            span {letter-spacing: 0.1em; text-transform: uppercase;}
+            &:hover {background-color: $primary; color: white;}}
+        figcaption {position: relative; bottom: -90%; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.16); border-radius: 8px; font-size: 13px; font-weight: 500; letter-spacing: 1.3px; width: 480px; background-color: #212121; padding: 6px 15px; color: #fff; font-family: $font2; text-transform: uppercase;
+            span {color: $primary; padding: 0 10px;}
+            a {color: white;
+                &:hover {color: $primary;}}}}
+    figure img{position: relative; width: 100%; bottom: 0; margin-bottom: -60px; padding-top: 20px;}
+    h1 { font-size: 70px; color: #fff; font-weight: 400; letter-spacing: normal; line-height: 1; margin-top: 100px;
+        strong {font-weight: 700; display: block; margin-bottom: 30px;}}
+    article {order: 2; padding: 0 50px 100px 100px; margin-left: 150px; position: relative; z-index: 10;
+        &:before {content: ''; position: absolute; left: -30px; right: -1000px; top: 0; bottom: 0; background-image: linear-gradient(to right, rgba(0, 45, 82, 0.8) 0%, #002d52 100%); z-index: -1;     transform: skew(-6deg);}}
+} 
+
+
+
+
+.big-box {background-color: white; position: relative; z-index: 5; padding: 10px 20px; max-width: 1350px; margin: 20px auto 50px;
+    h3 {font-family: $font2; font-size: 28px; font-weight: 700; max-width: 1000px; margin: auto; margin-top: 30px;
+        small {font-size: 15px; letter-spacing: 0.1em; text-transform: uppercase; margin-right: 20px; margin-top: 0;}}
+    p {font-size: 18px; max-width: 1100px; margin: 20px auto;
+        strong {font-size: 28px;}}
+    img {display: inline-block; margin-bottom: -3px;}
+    &:after {position: absolute; width:98%; border: 2px solid #90a5cf; content:''; height: 95%; z-index: 10; top:3%; left: 1%;}
+    .title-align {display: flex; align-items: center; justify-content: center; max-width: 550px; margin: auto; margin-top: 30px; margin-bottom: 20px;
+        h3 {margin-top: 0;}}}
+
+#recall { padding: 30px;
+    ul {columns: 4 280px; column-gap: 10px; max-width: 1200px; margin: 20px auto;
+        li { text-align: left; font-size: 18px; line-height: 30px;
+            &::marker {color: #f5a047;}
+        }
+    }
+}
+#article-clipping .big-box {padding: 20px 20px 40px;}
+
+.bkgrd{padding:0 0 1px;background-color:#fff;position:relative}
+
+
+#dentist{position:relative;z-index:2; margin:0 auto;padding:100px 10px 10px;flex-wrap:nowrap;
+    article{text-align:center; }
+    figure{position:relative; display: flex;
+        div { margin: 15px;
+            figcaption {padding-top: 10px; font-family: $font; font-weight: 700; font-size: 16px; text-transform: uppercase; letter-spacing: 1.6px;
+                a {font-size: 13px; color: $text; font-weight: 400; letter-spacing: normal; text-transform: none;
+                    strong {font-weight: 700; color: $secondary; font-size: 15px; text-transform: uppercase; letter-spacing: 0.05em;}
+                    &:hover {color: $primary;
+                        strong {color:$primary;}}
+                }
+            }
+            &:last-of-type a {margin: 0 -20px;}
+        }
+    }
+}
+
+.callout-strip {background-color: #002D52; width:100%; padding: 50px 30px;
+    .flex-ed {display: flex; justify-content: center; align-items: center; max-width: 1100px; margin: auto;
+        div {color: #fff; font-size: 48px; line-height: 50px; text-align: left; display: inline-block;}
+        img {display: inline-block;}
+        .btn-register {margin-left: 60px; min-width: 135px; padding: 10px 25px;
+            &:before {content:'\e928'; font-size:25px;font-family:'fontello'; color: white;}
+            &:hover {background-color: white;
+                &:before {color: $primary}}}
+    }
+}
+
+.caption {background-color: #262626; position: relative; display: table;  margin: -20px auto 20px;  padding: 0 5px; color: #fff;
+    a{color:#fff;display:inline-block;padding:10px;text-align:center;font:400 16px/1 $font;bottom:0;margin:auto;
+        span {margin: 0 10px; }
+        &:hover{color:$secondary}
+    }
+}
+
+figcaption{text-align:center;
+    p{font:300 18px/1.2 $font;color:#fff}
+    strong{margin-top:0;font-weight:700;display:block; font-size: 22px; font-family: $font2;}
+    &:hover p{color:$primary;}
+}
+
+
+/* ---------------- Contact --------------- */
+
+footer { padding-top: 30px; background-color: #002D52;
+    .flex-ed {justify-content: center; align-items: center;  max-width: 1280px; margin: auto; align-items: flex-start; justify-content: space-around;}
+    hr {width: 75px; background-color: #fff;
+        height: 4px; 
+        opacity: 0.1; margin: 20px auto 30px;}
+    .ft-logo {margin: 50px auto 40px;}
+    article { text-align: center; margin: 10px; flex: 0 1 300px;padding: 10px; }
+    .phone {font-size: 35px;margin: 10px auto 30px; font-weight:400; display: block;letter-spacing: normal; color: #fcca95;
+        &:hover {color: $primary; }
+    }
+    .address { color: #fff; font-size: 18px; line-height: 1.3;letter-spacing: 0.45px; font-weight: 400;
+        small {text-transform: uppercase;font-size: 15px;
+          letter-spacing: 0.38px; margin: 12px auto; display: block;}
+        &:hover {color: $primary; }
+    }
+    h3 {color: #fff; margin-top: 10px; }
+    #services {
+        span {color: white; font-size: 16px; font-weight: 700; text-transform: uppercase;}
+    }
+}
+
+#contact {flex: 0 1 460px;padding: 10px 10px 20px;
+    span {color: $primary; font-weight: bold; font-size: 31px; letter-spacing: 0.05em; display: block; margin: 40px auto 10px;}}
+
+#map {display: table; width: 100%;
+    iframe {display: block; height: 300px;}
+}
+
+.simple {margin: 0 0 5px;
+    .btn { width: 95%; font-size: 16px; font-weight: 700; padding: 15px 10px;
+        &:hover {background-color: #fff; color: $primary;} }
+    input {height: 45px;}
+    textarea { height: 70px; padding-top: 8px }
+    input, textarea { text-align: center;
+        outline: none;
+        border: none; 
+        background-color: #212121;
+        margin: 3px 0;
+        width: 95%;
+        padding: 3px 10px;
+        font-size: 16px; 
+        color: #fff;
+    }
+    input:focus,   textarea:focus, .btn:focus {     background-color: $primary; box-shadow: inset 0 -3px 0 $primary;}
+}
+::-webkit-input-placeholder { color: #fff; }
+::-moz-placeholder { color: #fff;  }
+:-ms-input-placeholder {color: #fff; }
+:-moz-placeholder {color: #fff; }
+
+.copy {  font: 400 16px/1.4 $font;   color: #a5a5a5;  margin-top: 20px; text-align: center; padding:30px 0 75px; 
+   a { margin: auto;  color: #a5a5a5; letter-spacing: -.5px;
+       &:hover { color: $primary;}
+    }
+}
+
+::placeholder{color:#fff;}
+
+
+#lp-appointment-form{max-width:850px;padding:10px;margin:20px auto;position:relative; text-align:center;
+    h1{font-size:50px;font-weight:700;margin:10px auto 40px;color:$text;}
+    > p{max-width:700px;margin:auto;margin-bottom:30px}
+    .simple{margin:40px auto 20px;max-width:550px;padding-right:3px}
+    label{display:none}
+    input, textarea{width:93%;display:table;margin:10px auto;background-color:#212121;color:#fff;border-radius:5px;padding:15px;font-size:16px; border:none;box-shadow:inset 0 1px 3px 0 rgba(0,0,0,0.5);
+        &:focus{background-color:$secondary}
+    }
+    textarea{height:200px;margin-bottom:30px}
+    textarea:focus, input:focus, button:focus{outline-style:solid;outline-width:thin;outline-color:$secondary}
+    .submitBtn{text-align:center;width:200px;margin:auto;display:table}
+}
+
+@media (max-width: 1430px) {
+    #banner {background-size: cover;}
+    #banner article {margin-left: 50px; padding-left: 5px; padding-bottom: 75px;}
+    #banner h1 {margin-top: 50px; font-size: 60px;}
+    #banner figure figcaption {bottom: -88%;}
+    #banner figure .btn {background-color: white;}
+}
+
+@media (max-width: 1300px) {
+    #banner article {padding-right: 10px;}
+}
+
+@media (max-width: 1200px) {
+    #banner figure img {display: block; max-width: 700px;}
+    #banner figure {flex: 0 1 100%; padding-bottom: 0;}
+    #banner article {flex: 0 100%; order: 1; padding: 0; margin-left: auto;}
+    #banner {background-image: none; background-color: $text; flex-wrap: wrap;}
+    #banner figure figcaption {bottom: 50px; background-color: #212121; margin: auto;}
+    #banner article:before {display: none;}
+    #banner figure .btn {bottom: 20px; margin-bottom: -20px;}
+}
+
+@media (max-width: 1160px) {
+     h2{font-size:45px}
+    .address{font-size:16px}
+    .phone{font-size:32px}
+    #stamp{right:auto;left:10px;top:-130px;
+        img{max-width:180px}
+    }
+    .border-box:before,.border-box:after{width:20px}
+    #banner h1 {margin: 30px 0;}
+    .callout-strip .flex-ed div {font-size: 35px;}
+    .big-box h3 {font-size: 24px;}
+}
+
+@media (max-width: 1080px) {
+    footer h3 {font-size: 40px;}
+    #contact {flex: 0 1 360px}
+    #office.split {justify-content: center; margin-top: 10px;}
+    .top-callout {font-size: 20px;}
+    .big-box h3 {font-size: 22px;}
+    .big-box br {display: block;}
+}
+
+@media (max-width: 1000px) {
+    header {  
+        address { margin-left: 0;
+            .address{display:none;}
+        }
+        .btn-alt{margin:0; order:0}
+        .flex-ed{justify-content:space-around; flex-wrap: wrap;
+            .logo {position:relative; flex: 0 1 100%; order: -1;}}
+        padding: 5px 15px;
+    }
+    .phone{font-size:24px}
+    #stamp{top:-100px}
+    h2{text-align:center}
+    .list ul{max-width:490px}
+    .border-box:before,.border-box:after{visibility:visible}
+    .border-box:after,.border-box:before{width:50px; bottom: 20px;}
+    .bkgrd{padding:0}
+    #dentist{display:block;padding:10px 0;
+        article{padding:10px}
+        figure{margin:auto;max-width:600px;padding:10px 10px 0}
+    }
+    #patients{display:block}
+    footer .flex-ed {flex-wrap: wrap; max-width: 700px; margin: auto;}
+    footer h3 {margin-bottom: 10px;}
+    footer hr {margin: 5px auto;}
+    footer .ft-logo {margin: 20px auto;}
+    #contact span {margin-top: 25px;}
+    #contact {flex: 0 1 690px;}
+    #services, #footer-form {flex: 1;}
+    .callout-strip {padding: 30px;}
+    .callout-strip .flex-ed {display: block;
+        .btn-register{margin: 10px auto; display: block; max-width: 300px;}
+        img {display: block; margin: 10px auto;}}
+}
+@media (max-width: 880px) {
+    #banner h1 {margin-top: 40px; font-size: 50px;}
+}
+@media (max-width: 790px) {
+    header {padding:0;
+        .flex-ed{flex-flow:row wrap; flex-wrap: wrap; align-items:stretch; padding: 0;}
+        .btn-alt, address{flex:0 1 50%; }
+        address{display: none;}
+        .logo{width:100%;margin:10px;max-width:none}
+        .btn-alt{color:#000;color:#fff;background-image:none;border:0;border-radius:0;box-shadow:none;text-shadow:none;padding:10px 3px;
+            &:hover{color:#fff;background-color:#3d3d3d}
+            &:after{display:none}
+        }
+        .phone-call span {display: none;}
+        .phone{font-size:16px;color:#fff;background-color: $secondary;border:0;display:flex;flex-flow:column;justify-content:center;font-weight:700;    width: 100%; flex: 0 1 50%; display: block; margin: auto; font-size: 25px; padding: 30px;  &:hover{background-color:#3d3d3d;color:#fff}}
+        .header-addresses {width: 50%; flex: 0 1 50%;}
+    }
+
+    .safe-bar span:last-of-type{display:block; font-size: 0}
+    .mobile-banner-reviews{display:block;background-color:#f3f3f3; text-transform: uppercase;
+        img, p{display:inline-block;vertical-align:middle}
+        p{padding:0 50px; font-weight: 700;}
+    }
+
+    #banner { display: block;
+        .container{flex-wrap:wrap}
+        .extract{font-size:22px;color:#064164;margin-bottom:20px;display:block}
+    }
+    .list{max-width:750px;margin:30px auto 20px}
+    .border-box:before,.border-box:after{height:63%}
+    .split p{text-align:center}
+    #dentist figure{margin-top:-20px}
+    .phone-call p{ display: none;}
+    .top-callout {font-size: 18px; letter-spacing: normal; padding: 10px;} 
+}
+@media (max-width: 720px) {
+    #recall ul {max-width: 250px; margin: 20px auto;}
+    #recall h3 {font-size: 18px;}
+    .big-box .title-align {flex-wrap: wrap;}
+}
+
+@media (max-width: 700px) {
+    #google > div{margin-top:20px}
+    #google p{margin-bottom:0}
+    .comment .caption2{margin-top:0}
+    #lp-appointment-form h1{font-size:36px}
+}
+
+@media (max-width: 590px) {
+    h2 {font-size:36px;margin-top:10px}
+    .safe-bar{letter-spacing:0 ;font-size: 16px;
+        span {margin: 0;}
+    }
+    .list ul li{font-size:24px;}
+    .frame{max-width:98%;margin:auto; iframe{display:none;}}
+    figcaption{margin-top:0}
+    #banner h1 strong {font-size: 75px;}
+    #banner figure figcaption {width: 100%;border: none; bottom:0;}
+    footer #contact {padding: 20px 10px;}
+    footer .flex-ed {display: block;}
+	.copy {padding: 10px 10px 25px; }
+    .copy span:first-of-type {display: block; visibility: hidden; font-size: 1px;}
+    .copy span:last-of-type {display: block; font-size: 1px; visibility: hidden; }
+}
+@media (max-width: 480px) {
+    h2, footer h2{font-size:36px}
+    .border-box:before,.border-box:after{display:none}
+    .bkgrd{padding-bottom:25px}
+    .copy {padding-bottom: 20px; font-size: 14px;}
+    header .header-addresses {width: 100%; flex: 0 1 100%;}
+    header .btn-alt {width: 100%; flex: 0 1 100%;}
+    #banner h1 {font-size: 40px; line-height: 50px;}
+    #banner figure figcaption span:last-of-type {display: block; font-size: 0;}
+}
+@media (max-width: 400px) {
+    header .btn-alt{font-size:14px}
+    .mobile-banner-reviews p{padding:0 30px; font-size:16px}
+    .safe-bar{font-size:15px}
+    .comment p{font-size:16px;letter-spacing:1px}
+    .comment .caption2{font-size:15px}
+    #dentist .caption{font-size:14px}
+    h2 {font-size: 32px;}
+    .insurance {
+        h2{margin:10px 0 -15px;padding:10px 0 15px}
+        .flex-ed div{margin:15px 18px;flex:1 1 100%}
+    }
+    #google p{font-size:14px}
+}
